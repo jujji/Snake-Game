@@ -7,9 +7,10 @@ var Game = {
 
     preload : function() {
 		
-		//Loading our images
+		//Loading our images and json
         game.load.image('snake', './assets/images/snake.png');
         game.load.image('food', './assets/images/food.png');
+		//game.load.json('green', 'config.json');
     },
 
     create : function() {
@@ -26,7 +27,9 @@ var Game = {
 
         cursors = game.input.keyboard.createCursorKeys();
 
-        game.stage.backgroundColor = 'a8c256';
+
+		//game.stage.backgroundColor = game.cache.getJSON('green');
+        game.stage.backgroundColor = '#a8c256';
 		
 		//Adding Score and Speed at the screen
 		textStyleLeft = { font: "bold 16px sans-serif", fill: "#c33149", align: "center" };
